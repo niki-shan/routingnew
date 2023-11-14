@@ -1,0 +1,25 @@
+
+<div class="container text-capitalize">
+    <form [formGroup]="productForm" (ngSubmit)="onformclick()">
+    <h3>{{isEditable ? 'Update Product' : 'Add new product'}}</h3>
+
+        <div class="form-group">
+            <label for="pname">pname</label>
+            <input type="text" formControlName="pname" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="pstatus">pstatus</label>
+            <select class="form-control" formControlName="pstatus">
+                <option value="delivered">Delivered</option>
+                <option value="dispatched">Dispatched</option>
+                
+            </select>
+            <div class="text-right mt-3">
+                <button class="btn btn-primary" *ngIf="!isEditable"
+                >Add</button>
+                <button class="btn btn-info"  *ngIf="isEditable"
+                (click)="onUpdate()" >Update</button>
+            </div>
+        </div>
+    </form>
+</div>

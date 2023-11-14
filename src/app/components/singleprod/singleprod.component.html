@@ -1,0 +1,17 @@
+
+
+<p class="alert alert-info">This product name is {{proObj.pname}}  </p>
+
+<!-- 
+<button class = "btn btn-primary"
+ [routerLink]="['/multiproducts',  proObj.pid, 'edit']">
+    Edit</button>  -->
+
+    <button class="btn btn-primary" type="button"
+    [routerLink]= '["edit"]'>
+        Edit
+   </button>
+   <button class="btn btn-primary" type="button"
+ [routerLink]= '["/multiproducts", proObj.pid, "edit"]'>
+     Edit11
+</button>
